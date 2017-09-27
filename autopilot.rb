@@ -1,4 +1,4 @@
-
+# 1
 def get_new_car
   {
     city: 'Toronto',
@@ -7,17 +7,23 @@ def get_new_car
   }
 end
 
+
+# 2
 def add_car(cars, new_car)
   cars << new_car
   "Adding new car to fleet. Fleet size is now #{cars.length}."
 end
 
+
+# 3
 def pick_up_passenger(car)
   car[:passengers] += 1
   car[:gas] -= 10
   "Picked up passenger. Car now has #{car[:passengers]} passengers."
 end
 
+
+# 4
 def get_destination(car)
   if car[:city] == 'Toronto'
     'Mississauga'
@@ -28,16 +34,22 @@ def get_destination(car)
   end
 end
 
+
+# 5
 def fill_up_gas(car)
   old_gas = car[:gas]
   car[:gas] = 100
   "Filled up to #{ get_gas_display(car[:gas]) } on gas from #{ get_gas_display(old_gas) }."
 end
 
+
+# 6
 def get_gas_display(gas_amount)
   "#{gas_amount}%"
 end
 
+
+# 7
 def drive(car, city_distance)
   if car[:gas] < city_distance
     return fill_up_gas(car)
@@ -48,12 +60,16 @@ def drive(car, city_distance)
   "Drove to #{car[:city]}. Remaining gas: #{ get_gas_display(car[:gas]) }."
 end
 
+
+# 8
 def drop_off_passengers(car)
   previous_passengers = car[:passengers]
   car[:passengers] = 0
   "Dropped off #{previous_passengers} passengers."
 end
 
+
+# 9
 def act(car)
   distance_between_cities = 50
 
@@ -73,6 +89,8 @@ def act(car)
   end
 end
 
+
+# 10
 def command_fleet(cars)
   cars.each_with_index do |car, i|
     action = act(car)
@@ -81,6 +99,8 @@ def command_fleet(cars)
   puts '---'
 end
 
+
+# 11
 def add_one_car_per_day(cars, num_days)
   num_days.times do
     new_car = get_new_car
