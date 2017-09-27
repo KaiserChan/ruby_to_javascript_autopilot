@@ -1,8 +1,10 @@
 // 1
-var new_car = {
-  'City': 'Toronto',
-  'Passengers': 0,
-  'Gas': 100,
+function getNewCar () {
+  return {
+    'City': 'Toronto',
+    'Passengers': 0,
+    'Gas': 100,
+  }
 }
 
 
@@ -47,7 +49,7 @@ function addCar() {
 function addOneCarPerDay(cars, num_days) {
   for (var i = 0; i < num_days; i++) {
     new_car;
-    
+
   }
 
 }

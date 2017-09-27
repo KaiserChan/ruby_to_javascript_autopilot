@@ -40,46 +40,31 @@ for (var i = 1; i <= number; i++) {
 // 5
 var base = 5;
 var repeat_times = 20;
-// function basePlus(number) {
+function basePlus(number) {
   for (var i = 0; i < repeat_times; i++) {
-    if (i === 0) {
-      base;
-      console.log(base);
-    } else {
-      base += 1;
-      console.log(base);
-    }
+    console.log(base + i);
   }
-// }
-// console.log(basePlus(repeat_times)); //<--- Why undefined?
-// return(basePlus(repeat_times));
+}
+basePlus(repeat_times);
 
 
 // 6
 var total = 0;
 var repeat_times = 100;
-// function addItselfUp(number) {
-  for (var i = 0; i < repeat_times; i++) {
-    total += i;
-  }
-  console.log(total);
-// }
-// console.log(addItselfUp(repeat_times)); //<--- Why undefined?
-// return(addItselfUp(repeat_times));
+for (var i = 0; i < repeat_times; i++) {
+  total += i;
+}
+console.log(total);
 
 
 // 7
-// function height() {
-  for (var i = 3; i <= 15; i++) {
-    if (i > 9) {
-      console.log('You can get on the rollercoaster!');
-    } else {
-      console.log('You are too short to ride this rollercoaster.');
-    }
+for (var i = 3; i <= 15; i++) {
+  if (i > 9) {
+    console.log('You can get on the rollercoaster!');
+  } else {
+    console.log('You are too short to ride this rollercoaster.');
   }
-// }
-// console.log(height()); //<--- Why undefined?
-// return(height());
+}
 
 
 // 8
